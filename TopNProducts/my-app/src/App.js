@@ -6,14 +6,15 @@ import ProductsList from './components/ProductsList';
 import ProductDetails from './components/ProductDetails';
 
 function App() {
+  console.log("App js loaded" );
   return (
     <ProductsContextProvider>
-      <Router>
-        <Routes>
-          <Route path="/" exact component={ProductsList} />
-          <Route path="/product/:id" component={ProductDetails} />
-        </Routes>
-      </Router>
+       <Router>
+         <Routes>
+         <Route path="/" element={<ProductsList />} />
+           <Route path="/product/:id" element={<ProductDetails />} />
+         </Routes>
+       </Router>
     </ProductsContextProvider>
   );
 }

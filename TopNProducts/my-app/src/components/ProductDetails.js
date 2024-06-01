@@ -8,10 +8,15 @@ const ProductDetails = () => {
   const { products } = useContext(ProductsContext);
   const product = products.find(product => product.id === id);
 
+
   return (
+    
     <div>
       <h2>{product.productName}</h2>
       <p>{product.price}</p>
+      <p>{product.rating}</p>
+      <p>{product.discount}</p>
+      <p>{product.availability}</p>
       {/* other product details */}
     </div>
   );
